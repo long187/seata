@@ -46,6 +46,7 @@ import io.seata.saga.engine.repo.StateMachineRepository;
 import io.seata.saga.engine.repo.impl.StateMachineRepositoryImpl;
 import io.seata.saga.engine.sequence.SeqGenerator;
 import io.seata.saga.engine.sequence.SpringJvmUUIDSeqGenerator;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,11 +62,12 @@ import org.springframework.core.io.Resource;
 
 /**
  * Default state machine configuration
+ *
  * @author lorne.cl
  */
 public class DefaultStateMachineConfig implements StateMachineConfig, ApplicationContextAware, InitializingBean {
 
-    private static final Logger       LOGGER = LoggerFactory.getLogger(DefaultStateMachineConfig.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DefaultStateMachineConfig.class);
 
     private StateLogRepository        stateLogRepository;
     private StateLogStore             stateLogStore;
@@ -171,7 +173,7 @@ public class DefaultStateMachineConfig implements StateMachineConfig, Applicatio
             asyncProcessCtrlEventPublisher = asyncEventPublisher;
         }
 
-        if(this.serviceInvokerManager == null){
+        if (this.serviceInvokerManager == null) {
             this.serviceInvokerManager = new ServiceInvokerManager();
         }
     }
