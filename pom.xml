@@ -88,7 +88,7 @@
 
     <properties>
         <!-- seata version -->
-        <revision>1.2.1-SNAPSHOT</revision>
+        <revision>1.2.1</revision>
 
         <!-- Compiler settings properties -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -244,7 +244,7 @@
                 </repository>
             </distributionManagement>
             <properties>
-                <image.publish.skip>false</image.publish.skip>
+                <image.publish.skip>true</image.publish.skip>
                 <image.tags>${project.version},latest</image.tags>
             </properties>
         </profile>
@@ -286,7 +286,7 @@
         <profile>
             <id>image</id>
             <properties>
-                <image.publish.skip>false</image.publish.skip>
+                <image.publish.skip>true</image.publish.skip>
                 <image.tags>latest</image.tags>
             </properties>
         </profile>
